@@ -71,17 +71,17 @@ export const Footer = () => {
 							<div style={{ display: "flex", gap: "10px" }}>
 								<Image
 									unoptimized
-									src={instagramIcon}
+									src={instagramIcon || ""}
 									width={30}
 									height={30}
 									alt="Instagram"
 								/>
 								<Image
-									unoptimized
+									unoptimizedx
 									src={linkedinIcon}
 									width={30}
 									height={30}
-									alt="Instagram"
+									alt="Linkedin"
 								/>
 							</div>
 						</div>
