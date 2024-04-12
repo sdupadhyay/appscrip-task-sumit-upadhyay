@@ -1,0 +1,38 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.default-width {
+	padding-left: 70px;
+	padding-right: 70px;
+}
+.sidebar-padding {
+	padding-left: 70px;
+	padding-right: 70px;
+}
+.flex-row {
+	flex-direction: row !important;
+}
+.d-flex {
+	display: flex;
+	gap: 10px;
+}
+.l-hide {
+	display: none !important;
+}
+@media screen and (max-width: 600px) {
+	.m-hide {
+		display: none !important;
+	}
+	.default-width {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.l-hide {
+		display: block !important;
+	}
+	.sidebar-padding {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
