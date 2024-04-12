@@ -1,8 +1,8 @@
 import Image from "next/image";
 import usaMap from "@/public/usa-map.png";
-import instagramIcon from "@/public/insta.png";
+// import instagramIcon from "@/public/insta.png";
 import linkedinIcon from "@/public/a.png";
-import amexIcon from "@/public/amex.png";
+// import amexIcon from "@/public/amex.png";
 import { FooterAccordion } from "./FooterAccordion";
 export const Footer = () => {
 	return (
@@ -69,13 +69,13 @@ export const Footer = () => {
 						<div>
 							<h3>FOLLOW US</h3>
 							<div style={{ display: "flex", gap: "10px" }}>
-								<Image
+								{/* <Image
 									unoptimized
 									src={instagramIcon || ""}
 									width={30}
 									height={30}
 									alt="Instagram"
-								/>
+								/> */}
 								<Image
 									unoptimizedx
 									src={linkedinIcon}
