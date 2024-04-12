@@ -1,10 +1,26 @@
 import Image from "next/image";
 import usaMap from "@/public/usa-map.png";
-// import instagramIcon from "@/public/insta.png";
 import linkedinIcon from "@/public/a.png";
 // import amexIcon from "@/public/amex.png";
 import { FooterAccordion } from "./FooterAccordion";
 export const Footer = () => {
+	const quickLinkData = [
+		"Orders & Shipping",
+		"Join/Login as a Seller",
+		"Payment & Pricing",
+		"Return & Refund",
+		"FAQs",
+		"Privacy Polucy",
+		"Terms and Conditions",
+	];
+	const listData = [
+		"About us",
+		"Stories",
+		"Artisans",
+		"Boutiques",
+		"Contact Us",
+		"EU Compilances Docs",
+	];
 	return (
 		<footer>
 			<div className="m-hide">
@@ -48,34 +64,28 @@ export const Footer = () => {
 					<div className="footer-section-1 flex-row" style={{ gap: "150px" }}>
 						<div className="list">
 							<h3>metta muse</h3>
-							<p>About Us</p>
-							<p>Stories</p>
-							<p>Artisans</p>
-							<p>Boutiques</p>
-							<p>Contact Us</p>
-							<p>EU Compliances Docs</p>
+							{listData?.map((ele, ind) => (
+								<p key={ind}>{ele}</p>
+							))}
 						</div>
 						<div className="list">
-							<h3>metta muse</h3>
-							<p>About Us</p>
-							<p>Stories</p>
-							<p>Artisans</p>
-							<p>Boutiques</p>
-							<p>Contact Us</p>
-							<p>EU Compliances Docs</p>
+							<h3>Quick Links</h3>
+							{quickLinkData?.map((ele, ind) => (
+								<p key={ind}>{ele}</p>
+							))}
 						</div>
 					</div>
 					<div className="footer-section-2">
 						<div>
 							<h3>FOLLOW US</h3>
 							<div style={{ display: "flex", gap: "10px" }}>
-								{/* <Image
+								<Image
 									unoptimized
-									src={instagramIcon || ""}
+									src={"/instagram.png"}
 									width={30}
 									height={30}
 									alt="Instagram"
-								/> */}
+								/>
 								<Image
 									unoptimizedx
 									src={linkedinIcon}
@@ -140,30 +150,10 @@ export const Footer = () => {
 					</div>
 				</div>
 				<div className="footer-section-1">
-					<FooterAccordion
-						title={"metta muse"}
-						list={[
-							"About us",
-							"Stories",
-							"Artisans",
-							"Boutiques",
-							"Contact Us",
-							"EU Compilances Docs",
-						]}
-					/>
+					<FooterAccordion title={"metta muse"} list={listData} />
 				</div>
 				<div className="footer-section-1">
-					<FooterAccordion
-						title={"Quick Links"}
-						list={[
-							"About us",
-							"Stories",
-							"Artisans",
-							"Boutiques",
-							"Contact Us",
-							"EU Compilances Docs",
-						]}
-					/>
+					<FooterAccordion title={"Quick Links"} list={quickLinkData} />
 				</div>
 				<div className="footer-section-1">
 					<h3>metta muse ACCEPTS</h3>
